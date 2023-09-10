@@ -23,7 +23,20 @@ def get_information():
 
     # Construct GitHub URLs
     github_repo_url = "https://github.com/KayongoYongo/HNGx-Backend-Internship"
-    github_file_url = "
+    github_file_url = f"{github_repo_url}/blob/0x00-Stage-One-Task/app.py"
+
+    #format for the response data
+    response_data = {
+        "slack_name": slack_name,
+        "current_day": current_day,
+        "utc_time": utc_time,
+        "track": track,
+        "github_file_url": github_file_url,
+        "github_repo_url": github_repo_url,
+        "status_code": 200
+    }
+
+    return jsonify(response_data)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
