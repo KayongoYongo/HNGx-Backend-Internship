@@ -1,10 +1,15 @@
 #!/usr/bin/python3
+"""The endpoint should take two GET request query parameters
+and return specific information in JSON format.
+"""
 
 from flask import Flask, request, jsonify
 from datetime import datetime, timedelta
 import pytz
 
+
 app = Flask(__name__)
+
 
 @app.route('/api', methods=['GET'])
 def get_information():
@@ -23,9 +28,9 @@ def get_information():
 
     # Construct GitHub URLs
     github_repo_url = "https://github.com/KayongoYongo/HNGx-Backend-Internship"
-    github_file_url = f"{github_repo_url}/blob/0x00-Stage-One-Task/app.py"
+    github_file_url = f"{github_repo_url}/blob/master/0x00-Stage-One-Task/app.py"
 
-    #format for the response data
+    # format for the response data
     response_data = {
         "slack_name": slack_name,
         "current_day": current_day,
@@ -37,6 +42,7 @@ def get_information():
     }
 
     return jsonify(response_data)
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
