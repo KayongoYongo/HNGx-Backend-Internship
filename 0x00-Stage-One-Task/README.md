@@ -15,7 +15,6 @@ The information required includes:
 + A  Status Code of Success
 
 ```json
-JSON
 {
   "slack_name": "example_name",
   "current_day": "Monday",
