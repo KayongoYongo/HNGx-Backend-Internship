@@ -14,7 +14,7 @@ The information required includes:
 + The GitHub URL of the full source code.
 + A  Status Code of Success
 
-
+```json
 JSON
 {
   "slack_name": "example_name",
@@ -25,7 +25,7 @@ JSON
   "github_repo_url": "https://github.com/username/repo",
   "status_code": 200
 }
-
+```
 
 **Acceptance Criteria**
 Endpoint Creation: Provide a publicly accessible endpoint.
